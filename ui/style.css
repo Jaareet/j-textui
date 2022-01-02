@@ -1,0 +1,58 @@
+@font-face {
+	font-family: Rubik;
+	src: url("https://cdn.discordapp.com/attachments/886707699826458634/927244796282687498/Rubik-Regular.ttf");
+}
+
+* {
+	font-family: Rubik;
+	text-shadow: 1px 1px #000000;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+.container {
+    position: absolute;
+    left: 50%;
+    bottom: 1%;
+    transform: translateX(-50%);
+    padding: .4vw;
+    background-color: #202020;
+    border-radius: .19vw;
+    box-shadow: 0 0 .5vw #101010, 0 0 .3vw #101010, 0 0 .5vw #101010;
+    border-left: .3vw solid #ccc;
+    font-size: .9vw;
+    color: #eee;
+}
+
+
+.INPUT_CONTEXT {
+    border-radius: .15vw;
+    background-color: #ccc;
+    padding: .15vw .3vw;
+    color: #202020;
+}
+
+.container-show {
+    animation: show .3s ease-in-out forwards;
+}
+
+.container-hide {
+    animation: leave .3s ease-in-out forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10vw) scale(.5);
+    }
+}
+
+@keyframes leave {
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10vw) scale(.5);
+    }
+}
