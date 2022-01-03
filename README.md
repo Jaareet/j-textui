@@ -8,7 +8,6 @@
 </div>
   
 ```lua
-local inPoint = nil
 local coords = {
      vec3(-536.773, -217.404, 37.65)
 }
@@ -22,11 +21,8 @@ CreateThread(function()
              local dist = #(pedCoords - v)
              if dist <= 5 then 
                  inPoint = i;
-                 exports["j-textui"]:Help(true, "Press ~INPUT_CONTEXT~ to make an action")
-             elseif dist >= 5 and inPoint == i then
-                 inPoint = false;
-                 exports["j-textui"]:Help(false)
-             end
+                 exports["j-textui"]:Help("Press ~INPUT_CONTEXT~ to make an action")
+            end
          end
          Wait(s)
      end
@@ -40,5 +36,7 @@ end)
   <img src = "https://cdn.discordapp.com/attachments/886714318471712798/927339874841919518/unknown.png" width = "500">
   
   
+
+  <h3>Thanks to 𝔼𝕝 ℙ𝕒𝕥𝕣𝕠𝕟#1119 for help me <3 </h3>
   <h3>Make with love</h3>
   <h3>I hope you like it <3</h3>

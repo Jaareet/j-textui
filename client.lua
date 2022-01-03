@@ -1,4 +1,4 @@
-function sendNUIMessageText(bool, msg)
+function sendNUIMessageText(msg)
     if msg then 
         msg = msg:gsub("~r~", "<span style=color:red;>")
         msg = msg:gsub("~b~", "<span style='color:rgb(0, 213, 255);'>")
@@ -21,8 +21,8 @@ function sendNUIMessageText(bool, msg)
         msg = msg:gsub("~INPUT_RELOAD~", "<span class = 'INPUT_CONTEXT'>R</span>")
         msg = "<span style=color:currentColor>" .. msg .. "</span>"
     end
-    SendNUIMessage({
-        mostrar = bool;
+
+    SendNUIMessage({ 
         message = msg;
     })
 end
